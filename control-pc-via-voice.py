@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 import wave, pyaudio
 import webbrowser
+import os
 '''
 百度语音识别SDK
 '''
@@ -59,6 +60,9 @@ def browser_open_text(text):
         return
     elif 'baidu' == str:
         webbrowser.get('chrome').open_new_tab("baidu.com")
+    elif '打开邮箱' == str:
+        outLookPath = r'''C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE'''#.replace('\\', '/')
+        os.system(r'"C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE"')
     else:
         webbrowser.get('chrome').open_new_tab("doubiiot.cn")
 
